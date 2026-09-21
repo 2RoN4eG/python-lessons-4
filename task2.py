@@ -12,12 +12,16 @@
 
 source = [4, 1, 7, 9, 12, 5, 3, 6, 12]
 source = [9, 15, 7, 9, 3, 8, 3, 10, 3]
+source = [12, 3, 4, 14, 5, 6, 7, 4, 14, 3, 5]
 
 sorted = source.copy()
 sorted.sort()
 
 minimum = sorted[0]
 maximum = sorted[-1]
+
+print("maximum is", maximum)
+print("minimum is", minimum)
 
 lhs = None
 rhs = None
@@ -45,8 +49,11 @@ for i in range(len(source)):
         rhs = len(source) - i - 1
         break
 
+print("lhs is", lhs)
+print("rhs is", rhs)
+
 sum = 0
-for i in range(lhs + 1, rhs, 1):
+for i in range(lhs + 1, rhs):
     value = source[i]
     sum += value
 
