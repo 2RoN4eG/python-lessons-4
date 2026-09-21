@@ -19,17 +19,18 @@
     ] Результат: NO
 """
 
+
 matrix = [
         [1, 2, 3],
         [4, 5, 2],
         [3, 4, 1]
     ]
 
-# matrix = [
-#         [7, 8, 9],
-#         [1, 5, 3],
-#         [9, 2, 7]
-#     ]
+matrix = [
+        [7, 8, 9],
+        [1, 5, 3],
+        [9, 2, 7]
+    ]
 
 result = True
 
@@ -39,7 +40,4 @@ for i in range(n):
         if matrix[i][j] != matrix[n - 1 - j][n - 1 - i]:
             result = False
 
-if result:
-    print("YES")
-else:
-    print("NO")
+print('YES') if result else print('NO')
