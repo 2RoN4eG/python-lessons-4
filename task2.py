@@ -29,32 +29,32 @@ rhs = None
 minimum_found = False
 maximum_found = False
 
-for i in range(len(source)):
-    value = source[i]
+for index in range(len(source)):
+    value = source[index]
     if value == maximum:
-        lhs = i
+        lhs = index
         maximum_found = True
         break
     elif value == minimum:
-        lhs = i
+        lhs = index
         minimum_found = True
         break
 
-for i in range(len(source)):
-    index = len(source) - i - 1
-    value = source[index]
+for index in range(len(source)):
+    last = len(source) - index - 1
+    value = source[last]
     if value == maximum and not maximum_found:
-        rhs = index
+        rhs = last
         break
     elif value == minimum and not minimum_found:
-        rhs = index
+        rhs = last
         break
 
 print("lhs is", lhs)
 print("rhs is", rhs)
 
 # sum_ = 0
-# for i in range(lhs + 1, rhs):
+# for index in range(lhs + 1, rhs):
 #     value = source[i]
 #     sum_ += value
 
