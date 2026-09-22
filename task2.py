@@ -41,20 +41,24 @@ for i in range(len(source)):
         break
 
 for i in range(len(source)):
-    value = source[len(source) - i - 1]
+    index = len(source) - i - 1
+    value = source[index]
     if value == maximum and not maximum_found:
-        rhs = len(source) - i - 1
+        rhs = index
         break
     elif value == minimum and not minimum_found:
-        rhs = len(source) - i - 1
+        rhs = index
         break
 
 print("lhs is", lhs)
 print("rhs is", rhs)
 
-sum = 0
-for i in range(lhs + 1, rhs):
-    value = source[i]
-    sum += value
+# sum_ = 0
+# for i in range(lhs + 1, rhs):
+#     value = source[i]
+#     sum_ += value
 
-print('sum is', sum)
+slice_sum = sum(source[lhs + 1: rhs])
+
+# print('sum is', sum_)
+print('sum is', slice_sum)
